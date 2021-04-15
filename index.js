@@ -16,33 +16,6 @@ function isDay(weatherDescription) {
 	else return false;
 }
 
-/* function currentCondition(weatherCondition) {
-	let condition;
-
-	if (weatherCondition >= 200 && weatherCondition <= 299) {
-		condition = 200;
-	}
-	if (weatherCondition >= 300 && weatherCondition <= 399) {
-		condition = 300;
-	}
-	if (weatherCondition >= 500 && weatherCondition <= 599) {
-		condition = 500;
-	}
-	if (weatherCondition >= 600 && weatherCondition <= 699) {
-		condition = 600;
-	}
-	if (weatherCondition >= 700 && weatherCondition <= 799) {
-		condition = 700;
-	}
-	if (weatherCondition >= 800 && weatherCondition <= 899) {
-		condition = 800;
-	} else if (weatherCondition < 200 || weatherCondition >= 900) {
-		condition = 0;
-	}
-
-	return condition;
-} */
-
 async function getWeather() {
 	const res = await fetch(
 		`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiID}&lang=es`
@@ -71,15 +44,6 @@ async function getWeather() {
 		$fragment.appendChild($clone);
 
 		$main.appendChild($fragment);
-
-		/* if (isDay(json.weather[0].icon)) {
-			console.log(json);
-			$main.style.backgroundColor = 'rgba(78, 209, 241, 0.4)';
-			$main.style.color = 'rgb(0, 0, 0)';
-		} else {
-			$main.style.backgroundColor = 'rgb(1, 31, 86)';
-			$main.style.color = 'rgb(255, 250, 205)';
-		} */
 	}
 }
 
@@ -97,4 +61,3 @@ d.addEventListener('submit', (e) => {
 		$form.value = '';
 	}
 });
-/* d.addEventListener('DOMContentLoaded', getWeather); */
