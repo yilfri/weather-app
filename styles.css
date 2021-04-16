@@ -117,7 +117,7 @@ body::before {
 
 .header-information .actual-temp .max-min .temp-min::before {
 	content: '';
-	background: url('assets/weatherStatus/down.svg') no-repeat;
+	background: url('assets/down.svg') no-repeat;
 	width: 10px;
 	height: 15px;
 	display: inline-block;
@@ -126,7 +126,7 @@ body::before {
 
 .header-information .actual-temp .max-min .temp-max::before {
 	content: '';
-	background: url('assets/weatherStatus/up.svg') no-repeat;
+	background: url('assets/up.svg') no-repeat;
 	width: 10px;
 	height: 15px;
 	display: inline-block;
